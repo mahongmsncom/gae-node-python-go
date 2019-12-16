@@ -1,3 +1,6 @@
  steps:
  - name: gcr.io/cloud-builders/git
    args: ['clone', 'https://github.com/mahongmsncom/gae-node-python-go.git']
+ - name: gcr.io/cloud-builders/git
+  entrypoint: '/bin/bash'
+  args: ['-c', 'ls -l /workspace']
